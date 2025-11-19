@@ -6,14 +6,22 @@
     */
 
     //ENTRADA
-    let senha = prompt(`Informe uma senha formada por quatro números inteiros:`);
-
+    let senha = (prompt(`Informe uma senha formada por 4 números inteiros`));
+ 
     //PROCESSAMENTO
-    while (senha.length != 4 || senha.includes(".")==true || senha.includes(",")==true || isNaN(Number(senha))){
-        alert(`Senha incorreta.`);
-        senha = prompt(`Informe uma senha formada por quatro números inteiros:`);
+    while ((senha.length != 4) || 
+        (senha.includes(".")) || 
+        (senha.includes(",")) || 
+        (Number.isInteger(parseInt(senha)) == false) || 
+        (parseInt(senha).toString().length != 4)
+    )
+    {
+        alert("Senha Incorreta!");
+        senha = (prompt(`Informe uma senha formada por 4 números inteiros`));
     }
 
-    alert(`Senha correta.`);
-  
-</script> 
+    alert(`Senha Correta`)
+    
+    //SAÍDA
+
+</script>
