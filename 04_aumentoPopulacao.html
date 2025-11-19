@@ -6,13 +6,19 @@
     */
 
     //ENTRADA
+    
     let paisA = 80000;
     let paisB = 200000; 
-
+    
+    let anos = 0;
 
     //PROCESSAMENTO
-
+    while(paisA < paisB){
+        paisA = paisA + (paisA * 3 / 100);
+        paisB = paisB + (paisB * 1.5 / 100);
+        anos++;
+    }
 
     //SAÍDA
-
+    document.write(`Serão necessários ${anos} anos para que a população do país A ultrapasse ou iguale a população do país B.`);
 </script>
