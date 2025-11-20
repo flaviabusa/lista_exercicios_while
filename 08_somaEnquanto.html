@@ -1,15 +1,19 @@
+<meta charset="UTF-8">
 <script>
     //Problema: Soma de números até um limite
     /*
     Peça para o usuário inserir números sucessivamente e some-os. O programa para quando o usuário inserir 0 e então exibe a soma total.
     */
-
+   
+    let numero = Number(prompt(`Informe um número:`));
     let soma = 0;
 
-    while (numero != 0) {
-        numero = Number(prompt(`Informe um número:`));
+    while (numero !== 0) {
         soma = soma + numero;
+        numero = Number(prompt(`Informe um número:`));
+        
     }
 
-    alert(`A soma dos número inseridos é de: ${soma}`);
-</script>
+    alert(`A soma totaldos número inseridos é: ${soma}`);
+
+</script> 

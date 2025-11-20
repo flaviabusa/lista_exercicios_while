@@ -4,12 +4,23 @@
     O computador escolhe um número aleatório de 1 a 30, e o usuário precisa adivinhar. O programa dá dicas ("maior" ou "menor") até acertar.
     */
 
-    //ENTRADA
-
+    // ENTRADA
+    const aleatorio = Math.floor(Math.random() * 30) + 1;
+    let tentativa = Number(prompt(`Tente adivinhar um número de 1 a 30.`));
 
     //PROCESSAMENTO
+    while (tentativa !== aleatorio) {
+        if (tentativa > aleatorio) {
+            tentativa = Number(prompt(`O número é menor!`));
 
+        }
+        else {
+            tentativa = Number(prompt(`O número é maior!`));
+
+        }
+    }
 
     //SAÍDA
-    
+    alert(`Parabéns! Você acertou o número.`);
+
 </script>

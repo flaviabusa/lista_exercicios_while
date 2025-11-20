@@ -14,30 +14,28 @@
     let nome = prompt(`Informe seu nome:`);
     let idade = prompt(`Informe sua idade:`);
     let salario = prompt(`Informe seu salário:`);
-    let sexo = prompt(`Informe seu sexo. F/M`).toLowerCase().trim();
-    let estadoCivil = prompt(`Informe seu estado civil. 's', 'c', 'v' ou 'd'.`).toLowerCase().trim();
+    let sexo = prompt(`Informe seu sexo: F / M `).toLowerCase().trim();
+    let estadoCivil = prompt(`Informe seu Estado Civil: 's', 'c', 'v', 'd'.`).toLowerCase().trim();
 
     //PROCESSAMENTO
     while (nome.length < 3) {
-        nome = prompt(`Informe seu nome.`);
+        nome = prompt(`Informe seu nome: `);
     }
     
     while (idade < 0 || idade > 150) {
-        idade = Number(prompt(`Informe sua idade.`));
+        idade = Number(prompt(`Informe sua idade: `));
     } 
     
     while (salario < 0) {
-        salario = Number(prompt(`Informe seu salário.`));
+        salario = Number(prompt(`Informe seu salário: `));
     } 
     
     while (sexo !== "f" && sexo !== "m" ) {
-        sexo = prompt(`Informe seu sexo. F/M`).toLowerCase().trim();
+        sexo = prompt(`Informe seu sexo: F / M `).toLowerCase().trim();
     } 
     
     while (estadoCivil !== "s" && estadoCivil !== "c" && estadoCivil !== "v" && estadoCivil !== "d") {
-        estadoCivil = prompt(`Informe seu estado civil. 's', 'c', 'v' ou 'd'.`).toLowerCase().trim();
+        estadoCivil = prompt(`Informe seu Estado Civil: 's', 'c', 'v', 'd'.`).toLowerCase().trim();
     }
-
-    //SAÍDA
 
 </script>

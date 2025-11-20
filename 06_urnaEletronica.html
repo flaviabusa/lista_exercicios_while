@@ -21,10 +21,60 @@
 
     //ENTRADA
 
+    let candidatoJ = 0;
+    let candidatoM = 0;
+    let nulo = 0;
+    let branco = 0;
+    let quantidade = 0;
+    let voto = Number(prompt(`1. Candidato Joãozinho 
+    2. Candidato Mariazinha 
+    3. Nulo
+    4. Branco
+    Entre com o seu voto:`));
 
     //PROCESSAMENTO
+    while (voto !== 0) {
+        if (voto > 0 && voto <= 4) {
+            quantidade++
+        }
 
+        if (voto == 1) {
+            candidatoJ++
+        }
+        else if (voto == 2) {
+            candidatoM++
+        }
+        else if (voto == 3) {
+            nulo++
+        }
+        else if (voto == 4) {
+            branco++
+        }
+        else {
+            alert(`Voto inválido!`);
+        }
+
+        voto = Number(prompt(`1. Candidato Joãozinho 
+        2. Candidato Mariazinha 
+        3. Nulo
+        4. Branco
+        Entre com o seu voto:`));
+    }
+
+    const porcNulo = (nulo / quantidade) * 100;
+    const porcBranco = (branco / quantidade) * 100;
 
     //SAÍDA
+
+    document.write(`A quantidade de votos da Mariazinha é: ${candidatoM}<br>`);
+    document.write(`A quantidade de votos do Joãozinho é: ${candidatoJ}<br>`);
+    document.write(`A porcentagem de votos nulos é: ${porcNulo.toFixed(2)}%<br>`);
+    document.write(`A porcentagem de votos brancos é: ${porcBranco.toFixed(2)}%<br>`);
+
+    if (candidatoM > candidatoJ) {
+        document.write(`A candidata vencedora é Mariazinha.`);
+    } else {
+        document.write(`O candidato vencedor é Joãozinho.`);
+    }
 
 </script>

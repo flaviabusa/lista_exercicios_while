@@ -8,11 +8,17 @@
     */
 
     //ENTRADA
-
+    let numero = prompt(`Informe um número`)
+    let numInvertido = 0
+    let digito;
 
     //PROCESSAMENTO
-
+    while (numero != 0) {
+        digito = numero % 10;
+        numInvertido = numInvertido * 10 + digito;
+        numero = Math.floor(numero / 10);
+    }
 
     //SAÍDA
-
+    document.write(`O seu número invertido é ${numInvertido}.`);
 </script>

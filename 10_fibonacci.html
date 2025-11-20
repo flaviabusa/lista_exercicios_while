@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script>
     //Problema: Fibonacci
     /*
@@ -6,10 +7,22 @@
 
     //ENTRADA
 
+    let quantidade = Number(prompt(`Quantos números da sequência de Fibonacci deseja obter: `));
 
-    //PROCESSAMENTO
-
-
-    //SAÍDA
+    let num1 = 0;
+    let num2 = 1;
+    let sequencia = 0;
     
+    // PROCESSAMENTO
+    
+    document.write(`Os ${quantidade} números da sequência de Fibonacci são: <br>`);
+    
+    while (sequencia < quantidade) {
+        document.write(`${num1} <br>`);
+        sequencia++
+        let soma = num1 + num2;
+        num1 = num2;
+        num2 = soma;
+    }
+
 </script>
